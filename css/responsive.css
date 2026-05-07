@@ -1,0 +1,73 @@
+/* css/responsive.css */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .flower-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .flower-circle-inner {
+    width: 170px;
+    height: 170px;
+    font-size: 1.5rem;
+  }
+
+  .intro-section,
+  .story-section,
+  .gallery-section {
+    padding: 2rem;
+    margin: 1rem;
+  }
+
+  .character-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .relationship-map-container {
+    min-height: 500px;
+  }
+
+  .relationship-node {
+    width: 90px;
+    height: 90px;
+  }
+
+  .relationship-node .node-avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 1.8rem;
+  }
+
+  .relationship-node .node-name {
+    font-size: 0.7rem;
+  }
+
+  .node-nayara {
+    top: 10%;
+  }
+  .node-kayshila {
+    top: 10%;
+    right: 10%;
+  }
+  .node-talia {
+    bottom: 10%;
+    left: 10%;
+  }
+  .node-mika {
+    bottom: 10%;
+    right: 10%;
+  }
+
+  .relationship-label {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+  }
+}

@@ -1,0 +1,203 @@
+/* css/hero.css */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      var(--helianthus-soft) 0%,
+      transparent 50%
+    ),
+    radial-gradient(circle at 80% 20%, var(--azureum-soft) 0%, transparent 50%),
+    radial-gradient(
+      circle at 40% 80%,
+      var(--catharanthus-soft) 0%,
+      transparent 50%
+    ),
+    radial-gradient(circle at 90% 90%, var(--sweetpea-soft) 0%, transparent 50%);
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 10;
+  max-width: 900px;
+  padding: 0 2rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--helianthus), var(--sweetpea));
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(187, 255, 106, 0.3);
+}
+
+.hero h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.hero h1 span {
+  display: inline-block;
+}
+.hero h1 .char1 {
+  color: var(--helianthus-dark);
+}
+.hero h1 .char2 {
+  color: var(--azureum-dark);
+}
+.hero h1 .char3 {
+  color: var(--catharanthus-dark);
+}
+.hero h1 .char4 {
+  color: var(--sweetpea-dark);
+}
+.hero h1 .char5 {
+  color: var(--Leaf);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.hero-genres {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.genre-tag {
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 2px solid;
+  transition: all 0.3s ease;
+}
+
+.genre-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.genre-slice {
+  border-color: var(--helianthus-dark);
+  color: #7ab52e;
+  background: var(--helianthus-soft);
+}
+.genre-drama {
+  border-color: var(--catharanthus-dark);
+  color: #c94e74;
+  background: var(--catharanthus-soft);
+}
+.genre-psycho {
+  border-color: var(--azureum-dark);
+  color: #6b5ac4;
+  background: var(--azureum-soft);
+}
+.genre-comedy {
+  border-color: var(--sweetpea-dark);
+  color: #c47a2e;
+  background: var(--sweetpea-soft);
+}
+.genre-school {
+  border-color: #bb8fce;
+  color: #7d3c98;
+  background: rgba(187, 143, 206, 0.2);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 30px;
+  height: 50px;
+  border: 3px solid var(--text-light);
+  border-radius: 20px;
+  position: relative;
+}
+
+.scroll-indicator span::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--text-light);
+  border-radius: 50%;
+  animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    top: 8px;
+  }
+  100% {
+    opacity: 0;
+    top: 30px;
+  }
+}
